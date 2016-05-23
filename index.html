@@ -203,6 +203,18 @@
 							<legend id="output"></legend>
 							<textarea id="textarea" rows="1" cols="1"></textarea><!--modified by javascript later-->
 						</fieldset>
+						<fieldset>
+						<div>
+								<label>Nombre del Archivo:
+								<input type="text" id="nombrearchivo" value="basededatos"/>
+								<script>
+							function guardartextarea(){
+							document.getElementById('descargartexto').href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(document.getElementById('textarea').value);
+								}
+							</script>
+							<a id="descargartexto" onmousedown="document.getElementById('descargartexto').download = document.getElementById('nombrearchivo').value;guardartextarea();" download="basededatos.txt" href="#">Exportar</a> </label>
+							</div>
+						</fieldset>
 					</td>
 				</tr>
 			</tbody>
